@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Species Predictor</title>
+</head>
+<body>
+    <h1>ML Model Deployment - Iris Species Prediction </h1>
+    <form action='/predict' method='post'>
+        <label for="feature1">Sepal Length (cm):</label><br>
+        <input type="text" id="feature1" name="feature1" required><br>
+
+        <label for="feature2">Sepal Width (cm):</label><br>
+        <input type="text" id="feature2" name="feature2" required><br>
+
+        <label for="feature3">Petal Length (cm):</label><br>
+        <input type="text" id="feature3" name="feature3" required><br>
+
+        <label for="feature4">Petal Width (cm):</label><br>
+        <input type="text" id="feature4" name="feature4" required><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
